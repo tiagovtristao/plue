@@ -1,0 +1,28 @@
+{
+  "repo": "/full/path/to/repo",
+  "extensionsConfig": {
+    ".ts": {
+      "sourceFileCriteriaLookup": [{
+        "id": "js_library",
+        "srcs": "srcs",
+        "deps": "deps",
+        "label": "name"
+      }],
+      "depsResolver": "./example/js/resolver.js"
+    },
+    ".go": {
+      "sourceFileCriteriaLookup": [{
+        "id": "go_library",
+        "srcs": "srcs",
+        "deps": "deps",
+        "label": "name"
+      }, {
+        "id": "go_binary",
+        "srcs": "srcs",
+        "deps": "deps",
+        "label": "name"
+      }],
+      "depsResolver": "./example/go/resolver"
+    }
+  }
+}
